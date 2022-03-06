@@ -354,7 +354,7 @@ function removeErrorOverlay() {
 function createErrorOverlay(diagnostics) {
     var overlay = document.createElement('div');
     overlay.id = OVERLAY_ID;
-    var errorHTML = '<div style="background: black; opacity: 0.85; font-size: 16px; color: white; position: fixed; height: 100%; width: 100%; top: 0; left: 0; padding: 30px; font-family: Menlo, Consolas, monospace; z-index: 9999;">';
+    var errorHTML = '<div style="background: black; opacity: 0.85; font-size: 16px; color: white; position: fixed; height: 100%; width: 100%; top: 0px; left: 0px; padding: 30px; font-family: Menlo, Consolas, monospace; z-index: 9999;">';
     var _iterator2 = _createForOfIteratorHelper(diagnostics), _step2;
     try {
         for(_iterator2.s(); !(_step2 = _iterator2.n()).done;){
