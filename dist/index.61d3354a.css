@@ -11,7 +11,8 @@ body {
   --body-shadow-color: #F98B99;
   --right-hand-color: #ffb1c6;
   --cheek-color: #F988BE;
-
+  --mouth-up-color: #7B2123;
+  --mouth-down-color: #F6605C;
   --white-color: #fff;
   --black-color:#000;
   --blue-color: #326BF7;
@@ -131,5 +132,28 @@ body {
 .cheek-right{
   top:185px;
   left:308px;
+}
+
+.mouth {
+  width:70px;
+  height: 50px;
+  background-color: var(--mouth-up-color);
+  border-radius: 50px 50px 150px 150px;
+  transform: rotate(15deg);
+  position: absolute;
+  left: 195px;
+  top:187px
+}
+
+.mouth:before{
+  content: '';
+  position: absolute;
+  width: 57px;
+  height:35px;
+  background-color: var(--mouth-down-color);
+  border-radius: 48px 50px 150px 150px;
+  box-shadow: inset 1px 2px 11px 1px var(--mouth-up-color);
+  top: 12px;
+  left: 5px;
 }
 /*# sourceMappingURL=index.61d3354a.css.map */
