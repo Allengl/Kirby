@@ -1,32 +1,10 @@
-body {
-  background-color: rgb(251, 255, 235);
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  width: 50vw
-}
-
-:root {
-  --body-color: #fcc5da;
-  --body-shadow-color: #F98B99;
-  --right-hand-color: #ffb1c6;
-  --cheek-color: #F988BE;
-  --mouth-up-color: #7B2123;
-  --mouth-down-color: #F6605C;
-  --foot-color: #E7547D;
-
-  --white-color: #fff;
-  --black-color:#000;
-  --blue-color: #326BF7;
-
-}
-
-.my-kirby {
-  position: relative;
-  top: 20vh
-
-}
-
+const string = `
+/*
+ *大家好，我是小邓，今天给大家画一只可爱的星之卡比
+ */
+/*
+ *首先，卡比有一个圆圆的脑袋
+ */
 .head {
   width: 400px;
   height: 400px;
@@ -35,8 +13,10 @@ body {
   box-shadow: inset 10px -35px 60px 0 var(--body-shadow-color), 40px 20px 64px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-
-.hand-left {
+/*
+ *接下来，我们画的一双小手
+ */
+ .hand-left {
   position: absolute;
   width: 150px;
   height: 250px;
@@ -61,8 +41,10 @@ body {
   border-radius: 100% 100% 0 40%/100% 100% 0 100%;
   box-shadow: inset 0px -45px 25px -5px var(--white-color), 40px 20px 64px 0 rgb(0 0 0 / 20%);
 }
-
-.eye {
+/*
+ *然后是两只大大的眼睛
+ */
+ .eye {
   position: absolute;
   width:35px;
   height:91px;
@@ -80,7 +62,10 @@ body {
   top:87px;
   left:275px;
 }
-
+/*
+ *眼睛里的珠子
+ */
+ 
 .eye-inner {
   background-color: var(--white-color);
   width:22px;
@@ -115,8 +100,10 @@ body {
   top:46px;
   box-shadow: 0 0 9px 8px var(--black-color);
 }
-
-.cheek {
+/*
+ *卡比有两个红红的脸蛋
+ */
+ .cheek {
   width:60px;
   height: 30px;
   background-color: var(--cheek-color);
@@ -135,8 +122,10 @@ body {
   top:185px;
   left:308px;
 }
-
-.mouth {
+/*
+ *然后，我们画卡比的嘴巴
+ */
+ .mouth {
   width:70px;
   height: 50px;
   background-color: var(--mouth-up-color);
@@ -158,8 +147,10 @@ body {
   top: 12px;
   left: 5px;
 }
-
-.foot-left{
+/*
+ *最后，是卡比是双脚
+ */
+ .foot-left{
   position: absolute;
   width:150px;
   height: 232px;
@@ -184,3 +175,8 @@ body {
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   box-shadow: inset 0 -2px 51px -4px var(--mouth-up-color);
 }
+/*
+ *好啦，画完啦，星之卡比送给你！
+ */
+  `
+export default string;

@@ -14,7 +14,6 @@ body {
   --mouth-up-color: #7B2123;
   --mouth-down-color: #F6605C;
   --foot-color: #E7547D;
-
   --white-color: #fff;
   --black-color:#000;
   --blue-color: #326BF7;
@@ -24,7 +23,6 @@ body {
 .my-kirby {
   position: relative;
   top: 20vh
-
 }
 
 .head {

@@ -4,10 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/index.61d3354a.css">
   <title>画一只星之卡比</title>
 </head>
 <body>
+<style id="demo2"></style>
+<div id="demo"></div>
+<div id="buttons">
+  <button id="btnPause">暂停</button>
+  <button id="btnPlay">播放</button>
+  <button id="btnSlow">慢速</button>
+  <button id="btnNormal">正常</button>
+  <button id="btnFast">快速</button>
+</div>
+<style>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  #buttons {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  #buttons > button {
+    margin-bottom: 10px;
+    padding: 4px 8px;
+  }
+
+  #demo2 {
+    display: none;
+  }
+
+  #demo {
+    position: fixed;
+    height: 50vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  #demo::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    background-color: rgb(251, 255, 235);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50vw
+  }
+
+  :root {
+    --body-color: #fcc5da;
+    --body-shadow-color: #F98B99;
+    --right-hand-color: #ffb1c6;
+    --cheek-color: #F988BE;
+    --mouth-up-color: #7B2123;
+    --mouth-down-color: #F6605C;
+    --foot-color: #E7547D;
+    --white-color: #fff;
+    --black-color: #000;
+    --blue-color: #326BF7;
+
+  }
+
+  .my-kirby {
+    position: relative;
+    top: 50vh
+  }
+
+
+</style>
 <div class="my-kirby">
   <div class="hand-left"></div>
   <div class="hand-right"></div>
@@ -25,5 +102,6 @@
   <div class="foot-left"></div>
   <div class="foot-right"></div>
 </div>
-<script src="/kirby.59712999.js"></script></body>
+<script src="/index.4d6bcbeb.js" defer=""></script>
+</body>
 </html>
