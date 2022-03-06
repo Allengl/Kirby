@@ -10,6 +10,8 @@ body {
   --body-color: #fcc5da;
   --body-shadow-color: #F98B99;
   --right-hand-color: #ffb1c6;
+  --cheek-color: #F988BE;
+
   --white-color: #fff;
   --black-color:#000;
   --blue-color: #326BF7;
@@ -111,3 +113,22 @@ body {
   box-shadow: 0 0 9px 8px var(--black-color);
 }
 
+.cheek {
+  width:60px;
+  height: 30px;
+  background-color: var(--cheek-color);
+  border-radius: 50%;
+  position: absolute;
+  transform: rotate(20deg);
+  box-shadow: 0 0 3px var(--cheek-color);
+}
+
+.cheek-left {
+  top: 125px;
+  left: 110px;
+}
+
+.cheek-right{
+  top:185px;
+  left:308px;
+}
