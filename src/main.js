@@ -1,66 +1,73 @@
 import string from './css.js'
 
 const player = {
-  id: undefined,
-  time: 100,
+  // 定义定时器
+  step: undefined,
+  // 每次写一个字符
+  n: 1,
+  // 速度快慢
+  speed: 50,
+  //初始化
+  init: () => {
+    // 这俩行代码是实现这个项目的核心
+    player.ui.version.innerText = string.substring(0, player.n)
+    player.ui.style.innerHTML = string.substring(0, player.n)
+    player.play()
+    player.bindEvents()
+  },
   ui: {
-    demo: document.querySelector('#demo'),
-    demo2: document.querySelector('#demo2'),
+    version: document.querySelector('#version'),
+    style: document.querySelector('#style')
   },
   events: {
     '#btnPause': 'pause',
     '#btnPlay': 'play',
     '#btnSlow': 'slow',
     '#btnNormal': 'normal',
-    '#btnFast': 'fast',
-  },
-  n: 1,
-  init: () => {
-    player.ui.demo.innerText = string.substr(0, player.n)
-    player.ui.demo2.innerHTML = string.substr(0, player.n)
-    player.bindEvents()
-    player.play()
+    '#btnFast': 'fast'
   },
   bindEvents: () => {
     for (let key in player.events) {
-      if (player.events.hasOwnProperty(key)) {
-        const value = player.events[key] // pause / play / slow
-        document.querySelector(key).onclick = player[value]
-      }
+      const value = player.events[key]
+      document.querySelector(key).onclick = player[value]
     }
   },
   run: () => {
     player.n += 1
     if (player.n > string.length) {
-      window.clearInterval(player.id)
+      window.clearInterval(player.step)
       return
     }
-    player.ui.demo.innerText = string.substr(0, player.n)
-    player.ui.demo2.innerHTML = string.substr(0, player.n)
-    player.ui.demo.scrollTop = player.ui.demo.scrollHeight
+    player.ui.version.innerText = string.substring(0, player.n)
+    player.ui.style.innerHTML = string.substring(0, player.n)
+    player.ui.version.scrollTop = player.ui.version.scrollHeight
   },
+  // 播放
   play: () => {
-    window.clearInterval(player.id)
-    player.id = setInterval(player.run, player.time)
+    player.step = setInterval(player.run, player.speed)
   },
+  // 暂停
   pause: () => {
-    window.clearInterval(player.id)
+    return window.clearInterval(player.step)
   },
+  // 慢速
   slow: () => {
     player.pause()
-    player.time = 300
+    player.speed = 300
     player.play()
   },
+  // 中速
   normal: () => {
     player.pause()
-    player.time = 100
+    player.speed = 100
     player.play()
   },
+  // 快速
   fast: () => {
     player.pause()
-    player.time = 0
+    player.speed = 0
     player.play()
-  },
-}
+  }
 
+}
 player.init()
