@@ -1,0 +1,47 @@
+body {
+  background-color: rgb(251, 255, 235);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50vw
+}
+
+:root {
+  --body-color: #fcc5da;
+  --body-shadow-color: #F98B99
+}
+
+.my-kirby {
+  position: relative;
+  top:20vh
+
+}
+
+.head {
+  width: 400px;
+  height: 400px;
+  border: red solid 1px;
+  background-color: var(--body-color);
+  border-radius: 50%;
+  box-shadow: inset 10px -35px 60px 0 var(--body-shadow-color), 40px 20px 64px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.hand-left {
+  position: absolute;
+  width: 150px;
+  height: 250px;
+  background-color: var(--body-color);
+  border-radius: 100% 100% 0 40%/100% 100% 0 100%;
+  border: blue solid 1px;
+  box-shadow: inset 0px -35px 60px 0 var(--body-shadow-color), 40px 20px 64px 0 rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  transform: rotate(15deg);
+  top: -90px;
+  left: 50px;
+}
+
+.hand-right{
+  position: absolute;
+  width:
+}
